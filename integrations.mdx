@@ -1,0 +1,161 @@
+---
+title: Integrations
+description: Connect None Documentation with your favorite tools and services
+---
+
+## Integration Overview
+
+None Documentation integrates seamlessly with popular development and collaboration tools to streamline your workflow.
+
+<Columns cols={3}>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Connect with GitHub, GitLab, and Bitbucket.
+  </Card>
+  <Card title="Communication" icon="message-square" href="#communication">
+    Integrate with Slack, Discord, and Teams.
+  </Card>
+  <Card title="Project Management" icon="check-square" href="#project-management">
+    Sync with Jira, Trello, and Asana.
+  </Card>
+</Columns>
+
+## Version Control Integration
+
+Keep your documentation in sync with your code using native version control integrations.
+
+<Tabs>
+  <Tab title="GitHub" icon="github">
+    Connect your GitHub repositories for automatic documentation syncing.
+    
+    <Steps>
+      <Step title="Install App" icon="download">
+        Install the None Documentation GitHub app.
+      </Step>
+      <Step title="Select Repository" icon="folder">
+        Choose which repositories to sync.
+      </Step>
+      <Step title="Configure Webhooks" icon="webhook">
+        Set up webhooks for real-time updates.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="GitLab" icon="git-branch">
+    Integrate with GitLab for comprehensive CI/CD documentation workflows.
+  </Tab>
+  <Tab title="Bitbucket" icon="git-branch">
+    Connect Bitbucket repositories for seamless documentation management.
+  </Tab>
+</Tabs>
+
+<Callout kind="info">
+  Version control integrations require repository admin access.
+</Callout>
+
+## Communication Tools
+
+Receive notifications and collaborate through your preferred communication platforms.
+
+<Expandable title="Slack Integration" default-open="true">
+  Get notified about documentation updates directly in your Slack channels.
+  
+  <CodeGroup tabs="Webhook Setup,Slash Commands">
+    ```bash
+curl -X POST -H 'Content-type: application/json' \
+  --data '{"text":"New docs published!"}' \
+  YOUR_SLACK_WEBHOOK_URL
+    ```
+    ```bash
+/slack command /docs-status
+    ```
+  </CodeGroup>
+</Expandable>
+
+<ExpandableGroup>
+  <Expandable title="Discord" default-open="false">
+    Set up Discord webhooks for documentation notifications.
+  </Expandable>
+  <Expandable title="Microsoft Teams" default-open="false">
+    Integrate with Teams for enterprise communication.
+  </Expandable>
+</ExpandableGroup>
+
+## Project Management
+
+Link documentation to your project management workflows.
+
+| Tool | Features | Setup |
+|------|----------|-------|
+| Jira | Issue linking, status updates | OAuth 2.0 |
+| Trello | Card attachments, checklists | API key |
+| Asana | Task creation, progress tracking | Personal access token |
+
+<Steps>
+  <Step title="Choose Tool" icon="tool">
+    Select your project management platform.
+  </Step>
+  <Step title="Authenticate" icon="key">
+    Connect using OAuth or API keys.
+  </Step>
+  <Step title="Configure Sync" icon="refresh-cw">
+    Set up automatic synchronization rules.
+  </Step>
+  <Step title="Test Integration" icon="check">
+    Verify the connection works correctly.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use integration templates to quickly set up common workflows.
+</Callout>
+
+## API and Webhook Integrations
+
+Build custom integrations using our REST API and webhook system.
+
+<Expandable title="Webhook Configuration" default-open="false">
+  Receive real-time notifications about documentation events.
+  
+  ```javascript
+const webhookUrl = 'https://your-app.com/webhook';
+
+// Example webhook payload
+{
+  "event": "document.updated",
+  "document": {
+    "id": "doc_123",
+    "title": "API Reference",
+    "url": "https://docs.none.com/api-reference"
+  },
+  "timestamp": "2024-01-15T10:30:00Z"
+}
+  ```
+</Expandable>
+
+## Custom Integrations
+
+Extend None Documentation with your own integrations.
+
+<CodeGroup tabs="Node.js,Python">
+  ```javascript
+const noneDocs = require('none-docs-sdk');
+
+const client = new noneDocs.Client({
+  apiKey: process.env.NONE_DOCS_API_KEY
+});
+
+client.documents.list().then(docs => {
+  console.log('Documents:', docs);
+});
+  ```
+  ```python
+from none_docs import Client
+
+client = Client(api_key=os.environ['NONE_DOCS_API_KEY'])
+documents = client.documents.list()
+print('Documents:', documents)
+  ```
+</CodeGroup>
+
+<Callout kind="success">
+  Our SDKs support all major programming languages for easy integration.
+</Callout>

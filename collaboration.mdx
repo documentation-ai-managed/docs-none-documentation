@@ -1,0 +1,143 @@
+---
+title: Collaboration
+description: Learn how to collaborate effectively on documentation projects
+---
+
+## Team Collaboration Features
+
+None Documentation enables seamless collaboration among team members with real-time editing, comments, and review workflows.
+
+<Columns cols={3}>
+  <Card title="Real-time Editing" icon="edit" href="#real-time">
+    Edit documents together in real-time.
+  </Card>
+  <Card title="Comments" icon="message-square" href="#comments">
+    Leave feedback and discuss changes.
+  </Card>
+  <Card title="Reviews" icon="check-circle" href="#reviews">
+    Structured review and approval processes.
+  </Card>
+</Columns>
+
+## Real-time Collaboration
+
+Work together on documentation without conflicts using our real-time editing features.
+
+<Steps>
+  <Step title="Share Document" icon="share-2">
+    Generate a shareable link or invite collaborators directly.
+  </Step>
+  <Step title="Edit Together" icon="users">
+    Multiple users can edit the same document simultaneously.
+  </Step>
+  <Step title="Resolve Conflicts" icon="git-merge">
+    Automatic conflict resolution ensures smooth collaboration.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="Live Cursor" icon="mouse-pointer">
+    See where your collaborators are working in real-time with live cursors.
+  </Tab>
+  <Tab title="Change Tracking" icon="history">
+    Track all changes made to documents with detailed history.
+  </Tab>
+  <Tab title="Offline Sync" icon="cloud-off">
+    Work offline and sync changes when back online.
+  </Tab>
+</Tabs>
+
+<Callout kind="info">
+  Real-time editing is available for all team plans and above.
+</Callout>
+
+## Commenting and Feedback
+
+Provide constructive feedback on documentation with inline comments and threaded discussions.
+
+<Expandable title="Adding Comments" default-open="true">
+  Select text and add comments to suggest improvements or ask questions.
+  
+  <CodeGroup tabs="Keyboard Shortcut,Menu Option">
+    ```bash
+# Press Ctrl+Shift+C to add comment
+    ```
+    ```javascript
+// Right-click selected text
+// Choose 'Add Comment' from menu
+    ```
+  </CodeGroup>
+</Expandable>
+
+<ExpandableGroup>
+  <Expandable title="Comment Threads" default-open="false">
+    Comments can be threaded for detailed discussions.
+  </Expandable>
+  <Expandable title="Notifications" default-open="false">
+    Get notified when someone replies to your comments.
+  </Expandable>
+</ExpandableGroup>
+
+## Review Workflows
+
+Implement structured review processes to ensure documentation quality.
+
+| Role | Permissions | Responsibilities |
+|------|-------------|------------------|
+| Author | Edit, comment | Create and modify content |
+| Reviewer | Comment, approve | Provide feedback and approve |
+| Admin | All permissions | Manage team and settings |
+
+<Steps>
+  <Step title="Create Draft" icon="file-text">
+    Mark documents as drafts for review.
+  </Step>
+  <Step title="Request Review" icon="user-plus">
+    Assign reviewers to your documents.
+  </Step>
+  <Step title="Address Feedback" icon="check">
+    Make changes based on reviewer comments.
+  </Step>
+  <Step title="Publish" icon="upload">
+    Publish approved documents.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Use checklists in your review process to ensure consistency.
+</Callout>
+
+## Managing Permissions
+
+Control who can access and modify your documentation with role-based permissions.
+
+<Expandable title="Permission Levels" default-open="false">
+  Assign different permission levels to team members based on their roles.
+  
+  - **Read**: View documents only
+  - **Comment**: Add comments and suggestions
+  - **Edit**: Modify documents directly
+  - **Admin**: Manage team settings and permissions
+</Expandable>
+
+## Integration with Tools
+
+Connect None Documentation with your existing collaboration tools.
+
+<CodeGroup tabs="Slack,Jira">
+  ```javascript
+// Slack integration: Post updates to channels
+const slackWebhook = 'https://hooks.slack.com/...';
+fetch(slackWebhook, {
+  method: 'POST',
+  body: JSON.stringify({ text: 'New docs published!' })
+});
+  ```
+  ```javascript
+// Jira integration: Link documentation to issues
+const jiraApi = 'https://your-domain.atlassian.net/rest/api/2/issue/ISSUE-123';
+fetch(jiraApi, {
+  headers: { 'Authorization': 'Basic ...' }
+}).then(res => res.json());
+  ```
+</CodeGroup>

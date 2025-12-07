@@ -1,0 +1,93 @@
+---
+title: Introduction
+description: Overview of None Documentation and its core capabilities
+---
+
+## Getting Started
+
+None Documentation is a comprehensive platform designed to help teams create, manage, and share documentation for their projects. Whether you're building APIs, web applications, or managing repositories, None Documentation provides intuitive tools to streamline your documentation workflow. This platform supports collaborative editing, version control integration, and automated publishing to ensure your docs stay current and accessible.
+
+<Columns cols={3}>
+  <Card title="Quick Start" icon="zap" href="#getting-started">
+    Get up and running in minutes with our guided setup process.
+  </Card>
+  <Card title="API Integration" icon="code" href="#api-integration">
+    Connect your repositories and automate documentation updates.
+  </Card>
+  <Card title="Collaboration" icon="users" href="#collaboration">
+    Work together seamlessly with real-time editing and review features.
+  </Card>
+</Columns>
+
+## Key Features
+
+None Documentation offers powerful features to enhance your documentation experience. Our platform includes advanced search capabilities, role-based permissions, and integration with popular version control systems.
+
+<Tabs>
+  <Tab title="Repositories" icon="folder">
+    Connect your Git repositories to automatically sync documentation with code changes. Track versions, manage branches, and ensure your docs reflect the latest updates.
+    
+    <Steps>
+      <Step title="Connect Repository" icon="link">
+        Link your GitHub, GitLab, or Bitbucket repository to None Documentation.
+      </Step>
+      <Step title="Configure Sync" icon="settings">
+        Set up automatic syncing for documentation files and API specs.
+      </Step>
+      <Step title="Publish Updates" icon="upload">
+        Automatically publish changes when code is merged.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="API Docs" icon="terminal">
+    Generate comprehensive API documentation from OpenAPI specifications. Include interactive examples, authentication guides, and testing tools.
+    
+    <CodeGroup tabs="JavaScript,Python">
+      ```javascript
+const response = await fetch('/api/repos', {
+  headers: { 'Authorization': 'Bearer YOUR_TOKEN' }
+});
+const repos = await response.json();
+```
+      ```python
+import requests
+
+response = requests.get('/api/repos', headers={'Authorization': 'Bearer YOUR_TOKEN'})
+repos = response.json()
+```
+    </CodeGroup>
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Pro tip: Use our CLI tool to initialize documentation in your repository with a single command.
+</Callout>
+
+## Use Cases
+
+Whether you're a developer documenting APIs, a product manager creating user guides, or a team lead organizing project knowledge, None Documentation adapts to your needs.
+
+<Expandable title="Developer Workflows" default-open="false">
+  For developers, None Documentation integrates directly into your development process. Automatically generate API docs from code comments, sync with pull requests, and maintain version-specific documentation.
+</Expandable>
+
+<Expandable title="Team Collaboration" default-open="false">
+  Teams can collaborate on documentation using familiar tools like Markdown, with features like comments, suggestions, and approval workflows to ensure quality.
+</Expandable>
+
+<ExpandableGroup>
+  <Expandable title="Integration Options" default-open="true">
+    Connect with Slack, Jira, and other tools to receive notifications about documentation updates.
+  </Expandable>
+  <Expandable title="Customization" default-open="false">
+    Customize themes, add custom domains, and integrate with your existing authentication systems.
+  </Expandable>
+</ExpandableGroup>
+
+| Feature | Free Plan | Pro Plan | Enterprise |
+|---------|-----------|----------|------------|
+| Basic docs | ✓ | ✓ | ✓ |
+| API generation | ✓ | ✓ | ✓ |
+| Collaboration | - | ✓ | ✓ |
+| Custom domains | - | - | ✓ |
+| Advanced security | - | - | ✓ |

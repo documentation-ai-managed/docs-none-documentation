@@ -1,0 +1,123 @@
+---
+title: Repositories
+description: Manage and organize your documentation repositories effectively
+---
+
+## Repository Management
+
+None Documentation provides powerful tools for managing documentation repositories. Connect your existing Git repositories or create new ones directly in the platform.
+
+<Steps>
+  <Step title="Connect Repository" icon="link">
+    Link your GitHub, GitLab, or Bitbucket repository to None Documentation.
+    
+    <CodeGroup tabs="GitHub CLI,Git Commands">
+      ```bash
+gh repo clone your-org/your-repo
+docs init
+      ```
+      ```bash
+git clone https://github.com/your-org/your-repo.git
+cd your-repo
+docs init --template basic
+      ```
+    </CodeGroup>
+  </Step>
+  <Step title="Configure Settings" icon="settings">
+    Set up auto-sync, branch tracking, and publication rules.
+  </Step>
+  <Step title="Invite Collaborators" icon="users">
+    Add team members with appropriate permissions.
+  </Step>
+</Steps>
+
+## Repository Structure
+
+Organize your documentation with a clear folder structure that scales with your project.
+
+<Columns cols={3}>
+  <Card title="Guides" icon="book" href="#guides">
+    User guides and tutorials.
+  </Card>
+  <Card title="API Reference" icon="code" href="#api-ref">
+    Technical API documentation.
+  </Card>
+  <Card title="Contributing" icon="users" href="#contributing">
+    Guidelines for contributors.
+  </Card>
+</Columns>
+
+<Expandable title="Recommended Structure" default-open="true">
+  A well-organized repository helps users find information quickly. Use clear naming conventions and consistent folder hierarchies.
+  
+  ```
+  docs/
+  ├── guides/
+  │   ├── getting-started.md
+  │   └── advanced-usage.md
+  ├── api/
+  │   ├── authentication.md
+  │   └── endpoints.md
+  ├── contributing.md
+  └── README.md
+  ```
+</Expandable>
+
+## Version Control Integration
+
+Keep your documentation in sync with your code using advanced version control features.
+
+<Tabs>
+  <Tab title="Branch Sync" icon="git-branch">
+    Automatically sync documentation branches with code branches. Ensure version-specific docs are always available.
+  </Tab>
+  <Tab title="Pull Requests" icon="git-pull-request">
+    Review documentation changes alongside code changes in pull requests.
+  </Tab>
+  <Tab title="Tags" icon="tag">
+    Create tagged releases for documentation versions.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  Use semantic versioning for your documentation releases to clearly communicate changes.
+</Callout>
+
+## Repository Analytics
+
+Track how your documentation is being used and identify areas for improvement.
+
+| Metric | Description | Use Case |
+|--------|-------------|----------|
+| Page Views | Number of times a page is viewed | Identify popular content |
+| Search Queries | Common search terms | Improve discoverability |
+| Time on Page | Average time spent reading | Assess content quality |
+| Bounce Rate | Percentage of single-page visits | Check navigation flow |
+
+<ExpandableGroup>
+  <Expandable title="Custom Analytics" default-open="false">
+    Integrate with Google Analytics or other tracking tools for detailed insights.
+  </Expandable>
+  <Expandable title="Export Data" default-open="false">
+    Export analytics data for further analysis in your preferred tools.
+  </Expandable>
+</ExpandableGroup>
+
+## Repository Templates
+
+Start quickly with pre-built templates for common documentation patterns.
+
+<CodeGroup tabs="CLI,Web Interface">
+  ```bash
+docs create --template api-reference --name my-api-docs
+  ```
+  ```javascript
+// Web interface: Select template from dropdown
+// Choose 'API Reference' template
+// Customize fields and create
+  ```
+</CodeGroup>
+
+<Callout kind="success">
+  Templates include best practices and can be customized to fit your specific needs.
+</Callout>
